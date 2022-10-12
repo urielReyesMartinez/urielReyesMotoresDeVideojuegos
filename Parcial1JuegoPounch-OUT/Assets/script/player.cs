@@ -1,69 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class player : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public int vida=50;
-    public int atackP=10;
-    public int velocid = 4f;
-    public int daño = 2;
-    public Transform;
-        private GameManager GameManager;
-    public Text textoVida;
-    Vector2 pocicionInicial;
+    private Rigidbody2D rb2D;
+    [Header("Horizontal")]
+    private float MovimientoHorizontal = 0f;
+    [SerializeField]private float suavizadomovimiento;
+    [SerializeField]private float velocidadmovimiento;
+    private Vector3 velocidad = Vector3.zero;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        GameManager = FindObjectOfType<GameManager>();
-        textoVida.text = "vida:" + GameManager.vida;
-        pocicionInicial = transform.position;
-        public ra
+        rb2D = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void fixedUpdate()
+    private void Update()
     {
-        if (transform.position.y < daño)quitarvida;
+       MovimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadmovimiento;
     }
-    void quitarvida()
+    private void FixedUpdate()
     {
-        GameManager.vida--;
-        textoVida.text = "vida:" + GameManager.vida;
-        transform.position = pocicionInicial;
-        Rigidbody2D.velocid:= Vector2.zero;
+        Mover(MovimientoHorizontal * Time.fixedDeltaTime);
     }
-    public void movimiento()
+    private void Mover(float mover)
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            Transform(velocid * Time.deltaTime, 0, 0);
-            Debug.Log("movimiento izquierdo");
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            Transform(velocid * Time.deltaTime, 0, 0);
-            Debug.Log("movimiento derecho");
-        }
-    }
-    public void atackP()
-    {
-        if(Input.GetKey(KeyCode.W))
-        {
-            Debug.Log("golpe izquierdo");
-        }
-        if(Input.GetKey(KeyCode.E))
-        {
-            Debug.Log("golpe derecho");
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("movimiento");
-        movimiento();
+        Vector3 velocidadObjetivo = new Vector3(mover, rb2D.velocity.y);
+        rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavizadomovimiento);
     }
 }
-

@@ -1,0 +1,14 @@
+punch out
+
+juego de boxeo en 2D. basado en una pela de personajes
+de botargas, la experiencia vivida en mexico.
+
+carpeta de motoresDeVideojuegosPunch-out
+carpeta de GamePunch
+probar juego 
+suerte con la experiencia.
+
+mecanica de juego
+movimiento y golpes
+teclas A y D movimiento
+teclas W y E golpeo
