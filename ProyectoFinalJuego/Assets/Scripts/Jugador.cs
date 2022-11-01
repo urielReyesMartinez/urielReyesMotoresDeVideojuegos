@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Jugador : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Rigidbody2D rb2D;
+    [Header("Horizontal")]
+    private float MovimientoHorizontal = 0f;
+    [SerializeField] private float suavizadomovimiento;
+    [SerializeField] private float velocidadmovimiento;
+    private Vector3 velocidad = Vector3.zero;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        rb2D = GetComponent<Rigidbody2D>();
+    }
+    private void Update()
+    {
+        MovimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadmovimiento;
+    }
+    private void FixedUpdate()
+    {
+        Mover(MovimientoHorizontal * Time.fixedDeltaTime);
+    }
+    private void Mover(float mover)
+    {
+        Vector3 velocidadObjetivo = new Vector3(mover, rb2D.velocity.y);
+        rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavizadomovimiento);
     }
 }
