@@ -25,4 +25,10 @@ public class MenuPrinci : MonoBehaviour
         SceneManager.LoadScene("Menustart");
 
     }
+    public void Salir()
+    {
+        
+
+    }
+
 }

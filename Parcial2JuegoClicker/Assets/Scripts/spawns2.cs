@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spaens : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject enem1;
 
     // Update is called once per frame
     void Update()
@@ -12,7 +12,7 @@ public class spaens : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-2, 5), Random.Range(-2, 5));
-            Instantiate(enemyPrefab, randomSpawnPosition, Quaternion.identity);
+            Instantiate(enem1, randomSpawnPosition, Quaternion.identity);
         }
     }
 }
