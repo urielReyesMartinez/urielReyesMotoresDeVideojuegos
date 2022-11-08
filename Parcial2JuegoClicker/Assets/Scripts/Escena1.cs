@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuPrinci : MonoBehaviour
+
+
+public class Escena1: MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,17 +16,18 @@ public class MenuPrinci : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
-    public void JugarJuego()
+    public void camara1()
     {
-        SceneManager.LoadScene("escena1");
+        SceneManager.LoadScene("Escena1");
     }
-    
-    public void Salir()
+    public void camara2()
     {
-        Application.Quit();
-
+        SceneManager.LoadScene("Escena2");
     }
-
+    public void Menustart()
+    {
+        SceneManager.LoadScene("Menustart");
+    }
 }
