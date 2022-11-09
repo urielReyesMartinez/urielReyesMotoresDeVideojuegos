@@ -7,6 +7,7 @@ public enum MOVEMENT
     NULL,
     LEFT,
     RIGTH,
+    JUMP,
 }
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class NewBehaviourScript : MonoBehaviour
             MoveState = MOVEMENT.RIGTH;
             Movement = true;
         }
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            Movement = true;
+            MoveState = MOVEMENT.JUMP;
+        }
         else 
         {
             MoveState = MOVEMENT.NULL;
@@ -43,14 +49,18 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (MoveState==MOVEMENT.LEFT)
         {
-            RB.AddForce(= new Vector2(-speed, 0));
+            RB.AddForce( new Vector2(-speed, 0),ForceMode2D.Impulse);
             //*RB.velocity = new Vector2(-speed, 0);
         }
         else if (MoveState==MOVEMENT.RIGTH)
         {
-            RB.AddForce(= new Vector2(-speed, 0));
+            RB.AddForce( new Vector2(-speed, 0),ForceMode2D.Impulse);
            // RB.velocity = new Vector2(speed, 0);
 
+        }
+        else if (MoveState == MOVEMENT.JUMP)
+        {
+            RB.AddForce(Vector2.up * JumpHeight);
         }
         else if (MoveState==MOVEMENT.NULL)
         {
