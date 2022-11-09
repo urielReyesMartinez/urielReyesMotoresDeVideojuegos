@@ -29,7 +29,7 @@ public class Enemigos : MonoBehaviour
 
         }
         barraVida.fillAmount = vidaEnemy / damege;
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             vidaEnemy -= damege;
         }
