@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MOVEMENT
+public enum MOVEMEN
 {
     NULL,
     LEFT,
     RIGTH,
     JUMP,
 }
-public class NewBehaviourScript : MonoBehaviour
+public class movimiento : MonoBehaviour
 {
     private Rigidbody2D RB;
-    public float speed = 3f;
+    public float speed = 2f;
     public bool Movement = false;
-    public MOVEMENT MoveState;
+    public MOVEMEN MoveState;
+    // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
@@ -27,42 +28,42 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Movement = true;
-            MoveState = MOVEMENT.LEFT;
+            MoveState = MOVEMEN.LEFT;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            MoveState = MOVEMENT.RIGTH;
+            MoveState = MOVEMEN.RIGTH;
             Movement = true;
         }
         else if (Input.GetKey(KeyCode.Space))
         {
             Movement = true;
-            MoveState = MOVEMENT.JUMP;
+            MoveState = MOVEMEN.JUMP;
         }
-        else 
+        else
         {
-            MoveState = MOVEMENT.NULL;
+            MoveState = MOVEMEN.NULL;
             Movement = false;
         }
     }
     public void FixedUpdate()
     {
-        if (MoveState==MOVEMENT.LEFT)
+        if (MoveState == MOVEMEN.LEFT)
         {
-            RB.AddForce( new Vector2(-speed, 0),ForceMode2D.Impulse);
+            RB.AddForce(new Vector2(-speed, 0), ForceMode2D.Impulse);
             //*RB.velocity = new Vector2(-speed, 0);
         }
-        else if (MoveState==MOVEMENT.RIGTH)
+        else if (MoveState == MOVEMEN.RIGTH)
         {
-            RB.AddForce( new Vector2(-speed, 0),ForceMode2D.Impulse);
-           // RB.velocity = new Vector2(speed, 0);
+            RB.AddForce(new Vector2(-speed, 0), ForceMode2D.Impulse);
+            // RB.velocity = new Vector2(speed, 0);
 
         }
-        else if (MoveState == MOVEMENT.JUMP)
+        else if (MoveState == MOVEMEN.JUMP)
         {
-           // RB.AddForce(Vector2.up * JumpHeight);
+            // RB.AddForce(Vector2.up * JumpHeight);
         }
-        else if (MoveState==MOVEMENT.NULL)
+        else if (MoveState == MOVEMEN.NULL)
         {
             //RB.AddForce(= new Vector2(-speed, 0));
             //RB.velocity = new Vector2(0, 0);
@@ -70,3 +71,4 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 }
+
