@@ -18,7 +18,7 @@ public class MenuPrinci : MonoBehaviour
     }
     public void JugarJuego()
     {
-        SceneManager.LoadScene("escena1");
+        SceneManager.LoadScene("comojugar");
     }
     
     public void Salir()
