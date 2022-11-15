@@ -1,0 +1,5 @@
+descargarla carpeta Parcial2JuegoCliker
+abrir la carpeta Parcial2JuegoCliker
+abrir la carpeta juegoCliker
+abrir el juego con un icono azul "studio"P2JuegoCliker
+
