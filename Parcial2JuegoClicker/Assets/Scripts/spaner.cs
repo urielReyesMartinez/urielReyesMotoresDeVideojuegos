@@ -13,13 +13,12 @@ public class spaner : MonoBehaviour
     public float tiemspawner=1;
     public float repeatspawner = 1;
     private int count1 = 0;
-    // public float tiempdristr = 1;
+  
 
     // inicializar el spawner
-    void Start()
+    void Start()//REFERENCIAR EL SAPANER
     {
         InvokeRepeating("spawnerenemies",tiemspawner,repeatspawner);
-        //InvokeRepeating("destrucion", tiempdristr, tiemspawner);
     }
 
     // Update is called once per frame
@@ -27,14 +26,9 @@ public class spaner : MonoBehaviour
     {
         
     }
-    //dretuir game object
-    //private void Destroy(GameObject[] enemyPrefab)
-    //{
-       // throw new System.NotImplementedException();
-    //}
 
     //posicionar donde apareceran los fantasmas en prefab
-    public void spawnerenemies()
+    public void spawnerenemies()//SPAWNER DE ENEMIGOS EN ALEATORIO COMO SU TIEMPO DE DESTRUCCION Y LA POCICION ALEATORIA CON UN CONTER DE ENEIMGOS
     {
         Vector3 spawposition = new Vector3(0, 0,0);
         spawposition = new Vector3(Random.Range(enemigos2.position.x, enemigos4.position.x),0);

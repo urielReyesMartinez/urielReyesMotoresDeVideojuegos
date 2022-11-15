@@ -18,12 +18,12 @@ public class cliker : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void AddClikers()
+    public void AddClikers()//EL TOTAL DE LOS CLIKER QUE DAN EN EL BOTON
     {
         totalclikes++;
         clikertotaltext.text = totalclikes.ToString("0");
     }
-    public void AutoclickUpgrade()
+    public void AutoclickUpgrade()//SUPUESTO BOTON DONDE PODRIA HACER UN AUTOCLIKER PERO NO COMO MULTIPLICADOR
     {
         //if(!hasUpgrade && totalclikes>=mininumckstoulockUpagrade)
         {

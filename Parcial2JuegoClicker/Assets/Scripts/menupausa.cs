@@ -11,7 +11,7 @@ public class menupausa : MonoBehaviour
     [SerializeField] private GameObject menuPrincipal;
 
     private bool juegopausa = false;
-    private void Update()
+    private void Update()//PANEL DE PAUSA
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -25,7 +25,7 @@ public class menupausa : MonoBehaviour
             }
         }
     }
-    public void Pausa()
+    public void Pausa()//EL CONGELAR EL JUEGO PARA MOSTRAR LOS BOTONES Y SELECIONAR EL SCRIP
     {
         Time.timeScale = 0f;
         pausa.SetActive(false);
@@ -41,7 +41,7 @@ public class menupausa : MonoBehaviour
         menuPrincipal.SetActive(false);
 
     }
-    public void menuprinci()
+    public void menuprinci()//CAMBIAR O REGRESAR ALA ESCENA DE MENI PRINCIPAL
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("menuprincipal");
