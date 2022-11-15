@@ -8,7 +8,6 @@ public class spaner : MonoBehaviour
     public Transform enemigos2;
     public Transform enemigos3;
     public Transform enemigos4;
-    public Transform enemigos5;
 
     public GameObject[] enemyPrefab;
     public float tiemspawner=1;
@@ -38,7 +37,7 @@ public class spaner : MonoBehaviour
     public void spawnerenemies()
     {
         Vector3 spawposition = new Vector3(0, 0,0);
-        spawposition = new Vector3(Random.Range(enemigos2.position.x, enemigos4.position.x), Random.Range(enemigos.position.y, enemigos5.position.y),0);
+        spawposition = new Vector3(Random.Range(enemigos2.position.x, enemigos4.position.x),0);
         GameObject enemy = Instantiate(enemyPrefab[Random.Range(0,enemyPrefab.Length)],spawposition,gameObject.transform.rotation);
         enemy.name = "ENEMIGOS" + count1++;
         Destroy(enemy, 4f);

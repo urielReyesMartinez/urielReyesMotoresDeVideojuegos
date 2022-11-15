@@ -32,7 +32,6 @@ Transform:
   - {fileID: 2587667052667940149}
   - {fileID: 2587667051681431356}
   - {fileID: 2587667051830021783}
-  - {fileID: 2587667051018405624}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,7 +51,6 @@ MonoBehaviour:
   enemigos2: {fileID: 2587667052667940149}
   enemigos3: {fileID: 2587667051681431356}
   enemigos4: {fileID: 2587667051830021783}
-  enemigos5: {fileID: 2587667051018405624}
   enemyPrefab:
   - {fileID: 3613154835332403841, guid: 3a2f295476ad7ca4fbab9ecb8c883cc1, type: 3}
   - {fileID: 7029768831198914804, guid: 57059966043227a4ab4b9b6dcfedacc9, type: 3}
@@ -62,36 +60,6 @@ MonoBehaviour:
   - {fileID: 7029768831198914804, guid: 57059966043227a4ab4b9b6dcfedacc9, type: 3}
   tiemspawner: 5
   repeatspawner: 10
---- !u!1 &2587667051018405627
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2587667051018405624}
-  m_Layer: 0
-  m_Name: enemigos5
-  m_TagString: Untagged
-  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2587667051018405624
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2587667051018405627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.02, z: -11.222703}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6596508484560699892}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2587667051237737054
 GameObject:
   m_ObjectHideFlags: 0
