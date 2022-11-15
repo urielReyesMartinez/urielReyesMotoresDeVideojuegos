@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escena2.unity
     guid: 41b9316c5a8a66140a9622191243a0ca
-  - enabled: 0
-    path: Assets/Scenes/Menustart.unity
-    guid: 83a3101989f04de40bae86552dbb0854
   - enabled: 1
     path: Assets/Scenes/Comojugar.unity
     guid: 643c81311ae31aa49aaa38ac28010a9d
