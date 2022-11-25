@@ -6,15 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrinci : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public void Jugar()
     {
-        
+        SceneManager.LoadScene("comojugar");
     }
-
-    // Update is called once per frame
-    void Update()
+    //public void Multijugador()
+    //{
+    //  SceneManager.LoadScene("Multijugador");
+    //}
+    //public void Creditos()
+    //{
+    //SceneManager.LoadScene("Creditos");
+    //}
+    public void Salir()
     {
-        
+        Application.Quit();
+
+    }
+    public void Seguir()
+    {
+        SceneManager.LoadScene("JuegoFinal");
     }
 }

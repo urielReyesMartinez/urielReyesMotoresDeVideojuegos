@@ -22,6 +22,7 @@ public class Jugador : MonoBehaviour
     private void FixedUpdate()
     {
         Mover(MovimientoHorizontal * Time.fixedDeltaTime);
+
     }
     private void Mover(float mover)
     {
