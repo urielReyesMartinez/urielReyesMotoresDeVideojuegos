@@ -13,7 +13,7 @@ public class menupausa : MonoBehaviour
     private bool juegopausa = false;
     private void Update()//PANEL DE PAUSA
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (juegopausa)
             {
