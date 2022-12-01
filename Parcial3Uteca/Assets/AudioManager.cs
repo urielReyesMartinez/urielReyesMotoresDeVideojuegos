@@ -52,9 +52,9 @@ public class AudioManager : MonoBehaviour
         audioSource.PlayOneShot(audioClipsSfx[(int)sudioclips_Sfx], sfvolumen);
         audioSourceEffectref = audioSource;
     }
-    public float modifycurrevolumen()
-    {
-        audioSource.volume = volumenref;
-        audioSourceEffectref.volume;
-    }
+    //public float modifycurrevolumen()
+   // {
+     //   audioSource.volume = volumenref;
+    //    audioSourceEffectref.volume;
+   // }
 }
