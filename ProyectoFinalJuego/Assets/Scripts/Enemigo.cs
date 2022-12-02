@@ -6,7 +6,7 @@ public class Enemigo : MonoBehaviour
 {
     public float rangoalerta;
     public LayerMask capaJugador;
-    public bool estaralerta;
+    bool estarAlerta;
     public Transform jugador;
     public float velocidad;
     // Start is called before the first frame update
@@ -18,9 +18,9 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        estaralerta= Physics.CheckSphere(transform.position, rangoalerta, capaJugador);
+        estarAlerta= Physics.CheckSphere(transform.position, rangoalerta, capaJugador);
 
-        if (estaralerta==true)
+        if (estarAlerta==true)
         {
             Vector3 posijugador = new Vector3(jugador.position.x, jugador.position.y, 0);
             //transform.LookAt(jugador);
