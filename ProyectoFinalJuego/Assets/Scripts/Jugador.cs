@@ -29,4 +29,15 @@ public class Jugador : MonoBehaviour
         Vector3 velocidadObjetivo = new Vector3(mover, rb2D.velocity.y);
         rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, velocidadObjetivo, ref velocidad, suavizadomovimiento);
     }
+   
+    
+    private void OnTriggerEnter(Collider other)//matar al jugador con este script al jugador
+    {
+       if (other.CompareTag("enemy"))
+       {
+           Debug.Log("muerte jugador");
+
+       }
+    }
+   
 }

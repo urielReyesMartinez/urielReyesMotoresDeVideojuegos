@@ -6,7 +6,7 @@ public class Enemigo : MonoBehaviour
 {
     public float rangoalerta;
     public LayerMask capaJugador;
-    bool estarAlerta;
+    private bool estarAlerta;
     public Transform jugador;
     public float velocidad;
     // Start is called before the first frame update
@@ -18,12 +18,12 @@ public class Enemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        estarAlerta= Physics.CheckSphere(transform.position, rangoalerta, capaJugador);
+        estarAlerta = Physics.CheckSphere(transform.position, rangoalerta, capaJugador);
 
-        if (estarAlerta==true)
+        if (estarAlerta == true)
         {
-            Vector3 posijugador = new Vector3(jugador.position.x, jugador.position.y, 0);
-            //transform.LookAt(jugador);
+            Vector3 posijugador = new Vector3(jugador.position.x, jugador.position.y,jugador.position.z);
+            transform.LookAt(jugador);
             transform.LookAt(posijugador);
             transform.position = Vector3.MoveTowards(transform.position, posijugador, velocidad * Time.deltaTime);
            
@@ -35,15 +35,4 @@ public class Enemigo : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, rangoalerta);
     }
 
-}
-public class muerte : MonoBehaviour
-{
-    private void OnTriggerEnter(Collider other)//matar al jugador con este script al jugador
-    {
-        if (other.CompareTag("enemy"))
-        {
-            Debug.Log("muerte jugador");
-
-        }
-    }
 }

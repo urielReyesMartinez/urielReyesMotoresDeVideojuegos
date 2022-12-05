@@ -5,7 +5,7 @@ using UnityEngine;
 public class perenemy : MonoBehaviour
 {
     Vector2 enemypos;
-    public GameObject playerm;
+    public GameObject player;
     bool perseguir;
     public int velocidad;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class perenemy : MonoBehaviour
     {
         if (perseguir)
         {
-            transform.position = Vector2.MoveTowards(transform.position, enemypos, velocidad * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position,enemypos, velocidad * Time.deltaTime);
         }
         if (Vector2.Distance(transform.position,enemypos)>12f)
         {
@@ -30,7 +30,7 @@ public class perenemy : MonoBehaviour
     {
         if (collision.tag.Equals("player"))
         {
-            enemypos = playerm.transform.position;
+            enemypos = player.transform.position;
             perseguir = true;
         }
     }
