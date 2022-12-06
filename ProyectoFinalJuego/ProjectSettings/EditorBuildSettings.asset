@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JuegoFinal.unity
     guid: be8134b583acf884fb92a42a775192d8
+  - enabled: 1
+    path: Assets/Scenes/Laberinto2.unity
+    guid: a79338cf9c0aa4748a5ca9d3bdd157b7
+  - enabled: 1
+    path: Assets/Scenes/LaberintoFinal.unity
+    guid: cca2e8b91517e7442825e4342ae60ad2
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 8d082faecf1ec2f44a03440ef0067b5a
   m_configObjects: {}

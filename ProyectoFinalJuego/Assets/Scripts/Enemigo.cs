@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    public float rangoalerta;
+    private float rangoalerta =5f;
     public LayerMask capaJugador;
     private bool estarAlerta;
     public Transform jugador;
@@ -20,16 +20,16 @@ public class Enemigo : MonoBehaviour
     {
         estarAlerta = Physics.CheckSphere(transform.position, rangoalerta, capaJugador);
 
-        if (estarAlerta == true)
+        if (Vector3.Distance(jugador.position,transform.position)<=rangoalerta)
         {
             Vector3 posijugador = new Vector3(jugador.position.x, jugador.position.y,jugador.position.z);
-            transform.LookAt(jugador);
+            //transform.LookAt(jugador);
             transform.LookAt(posijugador);
             transform.position = Vector3.MoveTowards(transform.position, posijugador, velocidad * Time.deltaTime);
            
         }
     }
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, rangoalerta);

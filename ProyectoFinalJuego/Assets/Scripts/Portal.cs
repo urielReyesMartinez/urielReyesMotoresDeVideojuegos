@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     public int numeroEscena;
-
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.tag == "player")
+        if (collision.gameObject.CompareTag ("Player"))
         {
             SceneManager.LoadScene(numeroEscena);
         }
     }
+    
 }
