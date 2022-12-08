@@ -8,7 +8,7 @@ public class recoger : MonoBehaviour
     public GameObject itembutt;
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Playe").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
     }
     public void OnTriggerEnter(Collider other)

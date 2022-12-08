@@ -9,6 +9,11 @@ public class Enemigo : MonoBehaviour
     private bool estarAlerta;
     public Transform jugador;
     public float velocidad;
+    
+    //public float minimoz;
+    //public float maximoz;
+  
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +27,9 @@ public class Enemigo : MonoBehaviour
 
         if (Vector3.Distance(jugador.position,transform.position)<=rangoalerta)
         {
-            Vector3 posijugador = new Vector3(jugador.position.x, jugador.position.y,jugador.position.z);
+            Vector3 posijugador = new Vector3(jugador.position.x, transform.position.y,transform.position.z);
+            
+           //transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.Clamp(transform.rotation.x,transform.rotation.y,transform.rotation.z));//codigo
             //transform.LookAt(jugador);
             transform.LookAt(posijugador);
             transform.position = Vector3.MoveTowards(transform.position, posijugador, velocidad * Time.deltaTime);
@@ -34,5 +41,5 @@ public class Enemigo : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, rangoalerta);
     }
-
+    
 }

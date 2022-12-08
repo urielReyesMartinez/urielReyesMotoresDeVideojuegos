@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class perenemy : MonoBehaviour
 {
-    Vector2 enemypos;
+   Vector2 enemypos;
     public GameObject player;
     bool perseguir;
     public int velocidad;
@@ -22,9 +22,9 @@ public class perenemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position,enemypos, velocidad * Time.deltaTime);
         }
         if (Vector2.Distance(transform.position,enemypos)>12f)
-        {
-            perseguir = false;
-        }
+       {
+         perseguir = false;
+       }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
