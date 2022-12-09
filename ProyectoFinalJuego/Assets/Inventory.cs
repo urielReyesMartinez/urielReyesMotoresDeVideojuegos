@@ -9,9 +9,6 @@ public class Inventory : MonoBehaviour
     public bool[] ranura;
     public GameObject[] slots;
 
-   
-
-
     // Start is called before the first frame update
     void Start()
     {

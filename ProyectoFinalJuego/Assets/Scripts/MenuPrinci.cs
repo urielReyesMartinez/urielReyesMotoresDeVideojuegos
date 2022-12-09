@@ -9,16 +9,20 @@ public class MenuPrinci : MonoBehaviour
     
     public void Jugar()
     {
-        SceneManager.LoadScene("comojugar");
+        SceneManager.LoadScene("ComoJugar");
     }
-    //public void Multijugador()
-    //{
-    //  SceneManager.LoadScene("Multijugador");
-    //}
-    //public void Creditos()
-    //{
-    //SceneManager.LoadScene("Creditos");
-    //}
+    public void Multijugador()
+    {
+      SceneManager.LoadScene("Multijugador");
+    }
+    public void JugarMultijugador()
+    {
+        SceneManager.LoadScene("JuegoMulti");
+    }
+    public void Creditos()
+    {
+      SceneManager.LoadScene("Creditos");
+    }
     public void Salir()
     {
         Application.Quit();
@@ -27,5 +31,13 @@ public class MenuPrinci : MonoBehaviour
     public void Seguir()
     {
         SceneManager.LoadScene("JuegoFinal");
+    }
+    public void Multijugadores()
+    {
+        SceneManager.LoadScene("FinalMultijugador");
+    }
+    public void Gracias()
+    {
+        SceneManager.LoadScene("MenuJuego");
     }
 }
