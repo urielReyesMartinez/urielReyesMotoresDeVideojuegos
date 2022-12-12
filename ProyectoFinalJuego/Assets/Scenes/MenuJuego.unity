@@ -981,7 +981,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116737304}
         m_TargetAssemblyTypeName: MenuPrinci, Assembly-CSharp
-        m_MethodName: JugarMultijugador
+        m_MethodName: Multijugador
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -13,7 +13,7 @@ public class menupausa : MonoBehaviour
     private bool juegopausa = false;
     private void Update()//PANEL DE PAUSA
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if (juegopausa)
             {
@@ -38,13 +38,13 @@ public class menupausa : MonoBehaviour
         Time.timeScale = 1f;
         pausa.SetActive(false);
         menupause.SetActive(false);
-        menuPrincipal.SetActive(false);
+       menuPrincipal.SetActive(false);
 
     }
     public void menuprinci()//CAMBIAR O REGRESAR ALA ESCENA DE MENI PRINCIPAL
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("menuprincipal");
+        SceneManager.LoadScene("MenuJuego");
 
     }
     public void Cerrar()

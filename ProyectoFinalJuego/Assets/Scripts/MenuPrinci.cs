@@ -13,7 +13,7 @@ public class MenuPrinci : MonoBehaviour
     }
     public void Multijugador()
     {
-      SceneManager.LoadScene("Multijugador");
+      SceneManager.LoadScene("Multijugador");//como jugar
     }
     public void JugarMultijugador()
     {
@@ -31,10 +31,6 @@ public class MenuPrinci : MonoBehaviour
     public void Seguir()
     {
         SceneManager.LoadScene("JuegoFinal");
-    }
-    public void Multijugadores()
-    {
-        SceneManager.LoadScene("FinalMultijugador");
     }
     public void Gracias()
     {
