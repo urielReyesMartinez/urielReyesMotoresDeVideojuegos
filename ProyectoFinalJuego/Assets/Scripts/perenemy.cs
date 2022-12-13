@@ -5,7 +5,7 @@ using UnityEngine;
 public class perenemy : MonoBehaviour
 {
    Vector2 enemypos;
-    public GameObject player;
+    public GameObject Player;
     bool perseguir;
     public int velocidad;
     // Start is called before the first frame update
@@ -28,9 +28,9 @@ public class perenemy : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag.Equals("player"))
+        if (collision.tag.Equals("Player"))
         {
-            enemypos = player.transform.position;
+            enemypos = Player.transform.position;
             perseguir = true;
         }
     }
