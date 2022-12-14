@@ -23,5 +23,10 @@ public class GameOver : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
+
 }
