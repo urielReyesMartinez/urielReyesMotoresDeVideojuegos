@@ -1,0 +1,15 @@
+Experimento Mortal
+
+Juego creado con tematica de terror, suspenso, sangre, sudor y alma.
+Te adentraras en los mas profundos y oscuros Experimentos del creador,
+seras un sujeto de prueba quien tendra que ganar las pruebas 
+quien te dio el creador, muere o vive.
+
+
+Entrar en la carpeta de ProyectoFinalJuego
+Descargar la carpeta de ExperimentoMortal
+Jugar el juego con el nombre ExperimentoMortal y con el icono
+de la empresa Blurry Spectrus
+Disfruta del juego 
+
+"vive para contarlo"
