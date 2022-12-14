@@ -1,6 +1,6 @@
 Experimento Mortal
 
-Juego creado con tematica de terror, suspenso, sangre, sudor y alma.
+Juego creado con tematica de terror, exploracion,suspenso, sangre, sudor y alma.
 Te adentraras en los mas profundos y oscuros Experimentos del creador,
 seras un sujeto de prueba quien tendra que ganar las pruebas 
 quien te dio el creador, muere o vive.
